@@ -7,8 +7,7 @@ password123 is a command-line tool for checking if a password is one of the 10,0
 ## Installation
 
 ```
-
-node node_modules/password123/cli/cli.js 0963992090aac2d595b32d34e8a5fcab9fae3151 947c844d900b26a575aeaf8ef37c3851e8be474b d53f877170056f989ee92a15557bbfb34b6a931e  test --hash
+password123 0963992090aac2d595b32d34e8a5fcab9fae3151 947c844d900b26a575aeaf8ef37c3851e8be474b d53f877170056f989ee92a15557bbfb34b6a931e  test --hash
 
 test     matched
 snoopy     matched    DSA    hex
