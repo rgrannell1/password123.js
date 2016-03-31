@@ -8,8 +8,8 @@
 const events          = require('events')
 const readline        = require('readline')
 
-const constants       = require('password123/commons/constants')
-const readFileStream  = require('password123/fs/read-file-stream')
+const constants       = require('../commons/constants')
+const readFileStream  = require('../fs/read-file-stream')
 
 
 

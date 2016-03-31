@@ -5,7 +5,7 @@
 
 
 const fs        = require('fs')
-const constants = require('password123/commons/constants')
+const constants = require('../commons/constants')
 
 
 

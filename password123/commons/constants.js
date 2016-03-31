@@ -18,8 +18,8 @@ var constants = {
 	},
 	availableDigests: ['hex', 'binary', 'base64'],
 	paths: {
-		commonPasswords:       path.resolve(path.join(__dirname, '../../..', 'data/common-passwords.txt' )),
-		commonPasswordsHashes: path.resolve(path.join(__dirname, '../../..', 'data/common-passwords.jsonl' ))
+		commonPasswords:       path.resolve(path.join(__dirname, '../..', 'data/common-passwords.txt' )),
+		commonPasswordsHashes: path.resolve(path.join(__dirname, '../..', 'data/common-passwords.jsonl' ))
 	},
 	events: {
 		error:           'error',

@@ -35,7 +35,7 @@ Options:
 
 
 const docopt      = require('docopt').docopt
-const password123 = require('password123/app/password123')
+const password123 = require('../app/password123')
 const args        = docopt(doc)
 
 
