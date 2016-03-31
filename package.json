@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Generate a high entropy, memorable password.",
   "bin": {
-    "password123": "./node_modules/password123/cli/cli.js"
+    "password123": "password123/cli/cli.js"
   },
   "preferGlobal": true,
   "scripts": {},
