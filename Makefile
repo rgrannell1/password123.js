@@ -18,3 +18,9 @@ CODE_PATH = password123/
 
 eslint:
 	$(ESLINT) $(ESLINT_FLAGS) $(CODE_PATH)
+
+snap:
+	cd snapcraft && snapcraft clean && snapcraft snap && cd ..
+
+install: snap
+	cd snapcraft && snap install password123_* && cd ..

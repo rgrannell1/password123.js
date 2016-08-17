@@ -6,7 +6,9 @@
     "password123": "password123/cli/cli.js"
   },
   "preferGlobal": true,
-  "scripts": {},
+  "scripts": {
+    "postinstall": "node password123/cli/write-hashes.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/rgrannell1/password123.js"
