@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "docopt": "^0.6.2",
+    "tar.gz": "^1.0.5",
     "targz": "^1.0.1"
   }
 }
