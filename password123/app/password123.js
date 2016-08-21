@@ -5,6 +5,7 @@
 
 
 
+const fs              = require('fs')
 const path            = require('path')
 const events          = require('events')
 const readline        = require('readline')
