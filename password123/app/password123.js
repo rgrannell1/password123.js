@@ -5,8 +5,10 @@
 
 
 
+const path            = require('path')
 const events          = require('events')
 const readline        = require('readline')
+const targz           = require('tar.gz')
 
 const constants       = require('../commons/constants')
 const readFileStream  = require('../fs/read-file-stream')
@@ -47,7 +49,7 @@ displayPassword.notMatch = hash => {
 
 
 
-const emitPasswordHashes = (passwordPath, hashesPath) => {
+const emitPasswordHashes = hashesPath => {
 
 	var emitter = new events.EventEmitter( )
 
@@ -131,13 +133,17 @@ const password123 = rawArgs => {
 
 	const args = password123.preprocess(rawArgs)
 
-	console.log( process.env.SNAP_DATA )
+	targz( )
+		.createReadStream(
+			path.join(constants.paths.commonPasswordsHashesCompressed)
+		.pipe(
+			fs.createWriteStream(
+				path.join(constants.paths.snapCommon, 'common-passwords.jsonl')) )
 
 	emitMatches(
 		args.passwords,
 		emitPasswordHashes(
-			constants.paths.commonPasswords,
-			constants.paths.commonPasswordsHashes)
+			path.join(constants.paths.snapCommon, 'common-passwords.jsonl'))
 	)
 	.on(constants.events.passwordMatch, hash => {
 		displayPassword(hash, true)

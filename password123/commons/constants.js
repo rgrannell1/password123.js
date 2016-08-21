@@ -18,8 +18,12 @@ var constants = {
 	},
 	availableDigests: ['hex', 'binary', 'base64'],
 	paths: {
-		commonPasswords:       path.resolve(path.join(__dirname, '../..', 'data/common-passwords.txt' )),
-		commonPasswordsHashes: path.resolve(path.join(__dirname, '../..', 'data/common-passwords.jsonl' ))
+		root:                            path.resolve(path.join(__dirname, '../..')),
+		snapCommon:                      process.env.SNAP_COMMON,
+		snapData:                        process.env.SNAP_DATA,
+		commonPasswords:                 path.resolve(path.join(__dirname, '../..', 'data/common-passwords.txt' )),
+		commonPasswordsHashes:           path.resolve(path.join(__dirname, '../..', 'data/common-passwords.jsonl' )),
+		commonPasswordsHashesCompressed: path.resolve(path.join(__dirname, '../..', 'data/common-passwords.jsonl.tar.gz' ))
 	},
 	events: {
 		error:           'error',
