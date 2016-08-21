@@ -131,6 +131,8 @@ const password123 = rawArgs => {
 
 	const args = password123.preprocess(rawArgs)
 
+	console.log( process.env.SNAP_DATA )
+
 	emitMatches(
 		args.passwords,
 		emitPasswordHashes(
