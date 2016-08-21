@@ -152,7 +152,7 @@ const password123 = rawArgs => {
 
 	const args = password123.preprocess(rawArgs)
 
-	const foo = path.join(constants.paths.snapCommon, 'common-passwords.jsonl')
+	const foo = path.join(constants.paths.snapData, 'common-passwords.jsonl')
 
 	try {
 		fs.lstatSync(foo)
@@ -163,7 +163,7 @@ const password123 = rawArgs => {
 	emitMatches(
 		args.passwords,
 		emitPasswordHashes(
-			path.join(constants.paths.snapCommon, 'common-passwords.jsonl'))
+			path.join(constants.paths.snapData, 'common-passwords.jsonl'))
 	)
 	.on(constants.events.passwordMatch, hash => {
 		displayPassword(hash, true)
