@@ -156,7 +156,7 @@ const password123 = rawArgs => {
 
 	try {
 		fs.lstatSync(foo)
-	} catch {
+	} catch (err) {
 		return bar(foo)
 	}
 
