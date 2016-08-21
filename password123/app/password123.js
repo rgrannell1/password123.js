@@ -130,17 +130,33 @@ const emitMatches = (unused, hashEmitter) => {
 
 
 
+const bar = fpath => {
+
+	console.log( path.join(constants.paths.commonPasswordsHashesCompressed) )
+	console.log( fpath )
+	console.log( '++ ++ ++ ++' )
+
+	targz( )
+		.createReadStream(
+			path.join(constants.paths.commonPasswordsHashesCompressed))
+		.pipe(
+			fs.createWriteStream(fpath))
+
+}
+
+
+
+
+
 const password123 = rawArgs => {
 
 	const args = password123.preprocess(rawArgs)
 
 	const foo = path.join(constants.paths.snapCommon, 'common-passwords.jsonl')
 
-	targz( )
-		.createReadStream(
-			path.join(constants.paths.commonPasswordsHashesCompressed))
-		.pipe(
-			fs.createWriteStream(foo))
+	if (fs.lstatSync(foo).isFile( )) {
+		return bar(foo)
+	}
 
 	emitMatches(
 		args.passwords,
