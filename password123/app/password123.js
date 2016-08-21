@@ -154,7 +154,9 @@ const password123 = rawArgs => {
 
 	const foo = path.join(constants.paths.snapCommon, 'common-passwords.jsonl')
 
-	if (fs.lstatSync(foo).isFile( )) {
+	try {
+		fs.lstatSync(foo)
+	} catch {
 		return bar(foo)
 	}
 
