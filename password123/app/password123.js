@@ -133,12 +133,13 @@ const password123 = rawArgs => {
 
 	const args = password123.preprocess(rawArgs)
 
+	const foo = path.join(constants.paths.snapCommon, 'common-passwords.jsonl')
+
 	targz( )
 		.createReadStream(
-			path.join(constants.paths.commonPasswordsHashesCompressed)
+			path.join(constants.paths.commonPasswordsHashesCompressed))
 		.pipe(
-			fs.createWriteStream(
-				path.join(constants.paths.snapCommon, 'common-passwords.jsonl')) )
+			fs.createWriteStream(foo))
 
 	emitMatches(
 		args.passwords,
